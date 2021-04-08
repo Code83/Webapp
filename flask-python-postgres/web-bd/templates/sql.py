@@ -16,15 +16,15 @@ sql4="update autos set kms = %s where patente =%s"
 #Obtiene reservas
 sql_ver_reserva="select * from ocupados;"
 #Elimina usuarios
-sql_del_user="delete from usuraios where id_user = %s"
+sql_del_user="delete from usuarios where rut = %s"
 #Ver usuarios creados
 sql_ver_user="select * from usuarios"
 
 #Definimos funcion para insertar datos en BD
 #Se reciben los datos a insertar en la variable datos
 
-def elimina_users(id_user):
-    cursor1.execute(sql_del_user,id_user)
+def elimina_users(rut):
+    cursor1.execute(sql_del_user,(rut,))
     print("Usuario eliminado ")
     conexion.commit()
     conexion.close()
@@ -121,8 +121,9 @@ elif menu==5:
     consulta_reservas()
 
 elif menu==6:
-    id_del = int(input("Ingresa ID del usuario a eliminar: "))
-    elimina_users(id_del)
+    rut = str(input("Ingresa el RUT del usuario a eliminar: "))
+    print ("Se eliminara el usuario rut {0}.".format(rut))
+    elimina_users(rut)
 
 elif menu==7:
     consulta_usuarios()
