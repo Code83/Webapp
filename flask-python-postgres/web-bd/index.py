@@ -1,10 +1,9 @@
 from flask import Flask, render_template
 import psycopg2
 
-
 app = Flask(__name__)
 
-# Creating simple Routes 
+# Creamos las rutas de la página 
 @app.route('/test')
 def test():
     return "Home Page"
@@ -13,7 +12,7 @@ def test():
 def about_test():
     return "About Page"
 
-# Routes to Render Something
+# Rutas y llamadas
 @app.route('/')
 def home():
     return render_template("home.html")

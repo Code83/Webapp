@@ -1,3 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="../static/css/boton.css">
+	<style>
+		body{font-family: Arial; background-color: #60aef8; box-sizing: border-box;}
+
+		form{
+			background-color: white;
+			border-radius: 5px;
+			color: rgb(94, 89, 89);
+			font-size: 0.8em;
+			padding: 20px;
+			margin: 0 auto;
+			width: 300px;
+		}
+
+		input, textarea{
+			border: solid 1px rgb(red, green, blue);
+			outline: none;
+
+			width: 180px;
+		}
+
+		.field{
+			border: solid 1px rgb(97, 95, 95);
+			padding: 10px;
+
+			
+		}
+
+		.field:focus{
+			border-color: #18A383;
+		}
+
+		.center-content{
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
 <form action="/my-handling-form-page" method="post">
 
     <ul>
@@ -14,9 +58,13 @@
           <input type="text" id="apemat" name="user_apemat">
         </li>
         <li>
-            <label for="rut">Rut:</label>
-            <input type="text" id="rut" name="user_RUT">
+            <label for="rut">Rut:</label> 
+            <input type="text" id="rut" name="user_RUT"> 
           </li>
-
-        <input type="submit" id="guardar" name="guardar" value="Guardar Datos"/>
+     
+           <input type="submit" id="guardar" class="btn btn-green" name="guardar" value="Registar"/>
+     
 </form>
+
+</body>
+</html>
